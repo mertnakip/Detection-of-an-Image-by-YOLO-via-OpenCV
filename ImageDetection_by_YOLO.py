@@ -42,3 +42,12 @@ outs = net.forward(proc.getOutputsNames(net))
 
 label_list = proc.postprocess(img, outs)
 
+
+# show the image
+cv2.imshow("object detection", img)
+
+# wait until any key is pressed
+cv2.waitKey()
+
+# release resourcesq
+cv2.destroyAllWindows()
